@@ -21,15 +21,15 @@ import {FilterDropdownComponent} from './filter-dropdown/filter-dropdown.compone
     AppRoutingModule
   ],
   providers: [AnimalsService],
-  bootstrap: [AppComponent]
-  // entryComponents: [AppComponent]
+  // bootstrap: [AppComponent]
+  entryComponents: [AppComponent]
 })
 export class AppModule {
   constructor(private injector: Injector) {
   }
   ngDoBootstrap() {
-    // const config: NgElementConfig = {injector: this.injector};
-    // const customComponent = createCustomElement(AppComponent, config);
-    // customElements.define('animals-wiki', customComponent);
+    const config: NgElementConfig = {injector: this.injector};
+    const customComponent = createCustomElement(AppComponent, config);
+    customElements.define('animals-wiki', customComponent);
   }
 }
