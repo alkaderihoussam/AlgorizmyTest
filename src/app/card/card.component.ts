@@ -10,7 +10,7 @@ import {Component, Input} from '@angular/core';
         <p class="card-text">{{text}}</p>
       </div>
     </div>`,
-  styleUrls: ['./app.component.scss']
+  styleUrls: []
 })
 export class CardComponent {
 
