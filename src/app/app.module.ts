@@ -22,6 +22,7 @@ import {FilterDropdownComponent} from './filter-dropdown/filter-dropdown.compone
   ],
   providers: [AnimalsService],
   // bootstrap: [AppComponent]
+
   entryComponents: [AppComponent]
 })
 export class AppModule {
