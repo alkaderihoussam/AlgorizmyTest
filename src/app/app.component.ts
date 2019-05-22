@@ -18,5 +18,20 @@ export class AppComponent implements OnInit {
   filteredAnimals: Animal[];
 
   ngOnInit() {
+    this.animalService.getAnimals().subscribe(animalsList => {
+      this.animals = animalsList;
+      this.filteredAnimals = animalsList;
+      this.animalFamilies = this.animals
+        .map(animal => animal.family)
+        .filter(((value, index, array) => array.indexOf(value) === index));
+    });
+  }
+
+  filterAnimalsPerFamily(family: string) {
+    if (family === '')
+      this.filteredAnimals = this.animals;
+    else {
+      this.filteredAnimals = this.animals.filter(animal => animal.family === family);
+    }
   }
 }
