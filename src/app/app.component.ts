@@ -21,7 +21,9 @@ export class AppComponent implements OnInit {
     this.animalService.getAnimals().subscribe(animalsList => {
       this.animals = animalsList;
       this.filteredAnimals = animalsList;
-      this.animalFamilies = this.animals.map(animal => animal.family).filter(((value, index, array) => array.indexOf(value) === index));
+      this.animalFamilies = this.animals
+        .map(animal => animal.family)
+        .filter(((value, index, array) => array.indexOf(value) === index));
     });
   }
 
