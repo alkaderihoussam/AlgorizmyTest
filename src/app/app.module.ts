@@ -21,7 +21,7 @@ import {createCustomElement, NgElementConfig} from "@angular/elements";
     HttpClientModule
   ],
   providers: [AnimalsService],
-  // bootstrap:[AppComponent]
+   bootstrap:[AppComponent],
   entryComponents: [AppComponent]
 })
 export class AppModule {
